@@ -40,7 +40,7 @@ app.post("/chats", (req, res) => {
         from:from,
         to:to,
         msg:msg,
-        delevered_at: new Date()
+        created_at: new Date()
     });
     newChat.save().then((res) => {
         console.log(res);
