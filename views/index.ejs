@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Mini Whatsapp</title>
 </head>
 <body>
     <h3>All Chats</h3>
+    <form method="get" action="/chats/new">
+        <button>New chat</button>
+    </form>
     <%for(chat of chats) {%>
     <div class="chat">
-        <p>From: <%= chat.from %></p>
+        <p>From: <i><%= chat.from %></i></p>
         <div class="msg">
             <p><%=chat.msg%></p>
         </div>
-        <p>Received by: <%= chat.to%></p>
+        <p>Received by: <i><%= chat.to%></i></p>
     </div>
     <hr>
     <%}%>
